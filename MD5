@@ -1,0 +1,15 @@
+f287296076cb1978812c059f13b1937e *DESCRIPTION
+ba0c6166e9164282f0ad2830ea3c34f5 *NAMESPACE
+edfc84e5556c3d6f14b6a185999aaaac *R/eel.R
+3b52d7db2aab330f885be1d4f5172139 *R/eel_est.R
+01367fec8c457fe20ca83a50ce5af3eb *build/partial.rdb
+c0ab5e0e4087637061655ead427b9fca *man/EEL.Rd
+cd89b6878e6832e8c16942ccfe076a25 *man/EEL_est.Rd
+02f45b6045d5e43f7881d4951b80d667 *man/EMLogLR.Rd
+312714717983a66ec804fef760665833 *man/eel-package.Rd
+102499f2f6b62eb3c8ba810d3ccdea7f *man/exp_factor.Rd
+e6b5b9dc4f5c158c4d032204ff9eb6d1 *man/exp_factor_est.Rd
+4e8c3e3ad790bd12939d5c963b023c9a *man/prime_image.Rd
+33adbbdbcbff812b077c769a13bf8228 *man/prime_image_est.Rd
+9f526b60bec95e0c6faefd0024cfd7d8 *man/print.EEL.Rd
+1546c11459cd065fd4b2b078f236d4f7 *man/summary.EEL.Rd

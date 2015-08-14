@@ -1,0 +1,13 @@
+exportPattern("^[[:alpha:]]+")
+import(emplik)
+import(rootSolve)
+
+S3method(EEL,default)
+S3method(EEL_est,default)
+S3method(EMLogLR,default)
+S3method(exp_factor,default)
+S3method(exp_factor_est,default)
+S3method(prime_image,default)
+S3method(prime_image_est,default)
+S3method(print,EEL)
+S3method(summary,EEL)
