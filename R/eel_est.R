@@ -36,12 +36,12 @@ prime_image_est.default<-function(theta_tilda,theta,x,equation){
   ##length between theta_tilda and theta
   fix_len<- sqrt(sum((theta - theta_tilda)^2))
   
-  ##unit vector of theta_theta_tilda
-  if (toString(theta)!=toString(theta_tilda)){
-    unit_vec<- (theta- theta_tilda)/sqrt(sum((theta -  theta_tilda)^2))
-  }else{
-    unit_vec=0
+  if (fix_len==0) {
+    tao_prime=0
   }
+  else{
+
+    unit_vec<- (theta- theta_tilda)/sqrt(sum((theta -  theta_tilda)^2))
   
   ## function of h(zeta)=gmma(n,l(zeta))*zeta
   
@@ -53,10 +53,7 @@ prime_image_est.default<-function(theta_tilda,theta,x,equation){
     return(result)
   }
   ## solve the zeta 
-  if (fix_len==0) {
-    tao_prime=0
-  }
-  else{
+ 
     tao_prime <- uniroot.all(f2,lower=0,upper=fix_len,maxiter = 200 )
   }
   

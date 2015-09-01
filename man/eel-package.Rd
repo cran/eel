@@ -9,8 +9,6 @@
 }
 \details{
 
-The DESCRIPTION file:
-\packageDESCRIPTION{This is a package for computing the extended empirical log likelihood ratio for the mean and parameters defined by estimating equations based on first order similarity mapping.}
 \packageIndices{eel}
 The extended empirical log likelihood ratio for the mean is computed by calling the function EEL(), and that for the parameter defined estimating equations is computed by calling the function EEL_est(). This package requires pre-installation of two packages "emplik" and "rootSolve". These are needed for computing the prime image of a point theta as well as the final extended empirical log likelihood ratio value as described in Tsao and Wu (2013, 2014). Only the first-order EEL discussed Tsao and Wu (2013, 2014) is included in this package.
 }

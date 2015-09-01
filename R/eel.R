@@ -50,30 +50,22 @@ prime_image.default<-function(theta_tilda,theta,x){
   deltan=1
   ##length between theta_tilda and theta
   fix_len<- sqrt(sum((theta - theta_tilda)^2))
-  
-  ##unit vector of theta_theta_tilda
-  if (toString(theta)!=toString(theta_tilda)){
-  unit_vec<- (theta- theta_tilda)/sqrt(sum((theta -  theta_tilda)^2))
-  }else{
-    unit_vec=0
-  }
- 
-  ## function of h(zeta)=gmma(n,l(zeta))*zeta
 
+  ##unit vector of theta_theta_tilda
+  if (fix_len!=0){
+  unit_vec<- (theta- theta_tilda)/sqrt(sum((theta -  theta_tilda)^2))
   f2<-function(tao){
     result=c()
     for (i in 1: length(tao)){
-    result[i]=exp_factor(x,theta_tilda+tao[i]*unit_vec)*tao[i]-fix_len
+      result[i]=exp_factor(x,theta_tilda+tao[i]*unit_vec)*tao[i]-fix_len
     }
     return(result)
   }
-  ## solve the zeta 
-  if (fix_len==0) {
+  tao_prime <- uniroot.all(f2,lower=0,upper=fix_len,maxiter = 200 )
+  }else{
     tao_prime=0
   }
-  else{
-  tao_prime <- uniroot.all(f2,lower=0,upper=fix_len,maxiter = 200 )
-  }
+ 
   
   # choose the value that is closest to theta
   if (length(tao_prime)!=1){
